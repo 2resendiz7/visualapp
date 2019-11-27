@@ -101,18 +101,7 @@ public class Main2Activity extends AppCompatActivity {
 
         @Override
         public void onSessionSuspended(Session session, int i) {}
-
-
-
-
         }
-
-
-
-
-
-
-
 
     public void menuoptotipos(View view){
 

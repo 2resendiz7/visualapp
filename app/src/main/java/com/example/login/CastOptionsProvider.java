@@ -16,7 +16,7 @@ public class CastOptionsProvider implements OptionsProvider {
 
         List<String> supportedNamespaces = new ArrayList<>();
         supportedNamespaces.add(CUSTOM_NAMESPACE);
-        CastOptions castOptions = new CastOptions.Builder().setReceiverApplicationId(context.getString(R.string.F5F52592)).build();
+        CastOptions castOptions = new CastOptions.Builder().setReceiverApplicationId(context.getString(R.string.receiver_id)).build();
         return castOptions;
     }
 

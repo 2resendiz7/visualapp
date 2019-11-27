@@ -10,6 +10,7 @@
     <string name="testEgiratoria">Test E giratoria</string>
     <string name="testIshihara">Test Ishihara</string>
     <string name="Menuprincipal">Menú Principal</string>
+    <string name="receiver_id" value="F5F52592">receiver_id</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
