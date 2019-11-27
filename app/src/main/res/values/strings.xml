@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Visual Support</string>
+    <string name="Ingresar">Ingresar</string>
+    <string name="MenuOptotipos">Optotipos</string>
+    <string name="Botonexamen">Examen de la vista</string>
+    <string name="Terapiavisual">Terapia Visual</string>
+    <string name="Simulacionojo">Simulación del Ojo</string>
+    <string name="testsnellen">Test Snellen</string>
+    <string name="testLea">Test Lea</string>
+    <string name="testEgiratoria">Test E giratoria</string>
+    <string name="testIshihara">Test Ishihara</string>
+    <string name="Menuprincipal">Menú Principal</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="Usuario" />
+    <string name="Contraseña" />
+</resources>
