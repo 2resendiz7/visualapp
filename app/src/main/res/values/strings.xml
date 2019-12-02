@@ -4,6 +4,9 @@
     <string name="MenuOptotipos">Optotipos</string>
     <string name="Botonexamen">Examen de la vista</string>
     <string name="Terapiavisual">Terapia Visual</string>
+    <string name="Ejerciciocolores">Ejercicio Colores</string>
+    <string name="Ejercicionumeros">Ejercicio Números</string>
+    <string name="Ejerciciolectura">Ejercicio Lectura</string>
     <string name="Simulacionojo">Simulación del Ojo</string>
     <string name="testsnellen">Test Snellen</string>
     <string name="testLea">Test Lea</string>
@@ -11,9 +14,12 @@
     <string name="testIshihara">Test Ishihara</string>
     <string name="Menuprincipal">Menú Principal</string>
     <string name="receiver_id" value="F5F52592">receiver_id</string>
+    <string name="test">rfrfrfr</string>
+    <string name="media_route_menu_title"></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="Usuario" />
     <string name="Contraseña" />
+
 </resources>

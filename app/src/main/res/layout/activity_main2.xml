@@ -8,19 +8,16 @@
     tools:context=".Main2Activity"
     android:orientation="vertical">
 
-    <androidx.support.v7.app.MediaRouteButton
-        android:id="@+id/media_route_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:mediaRouteTypes="user"
-        android:gravity="center"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,23 +48,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="TerapiaVisual"
                 android:orientation="vertical"
-                android:text="Terapia Visual"
+                android:text="@string/Terapiavisual"
                 android:textSize="18sp" />
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="100dp">
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Simulación del Ojo"
-                android:textSize="18sp" />
-        </LinearLayout>
 
     </LinearLayout>
 

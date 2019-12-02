@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.cast.framework.CastContext;
 
@@ -25,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent ingresar = new Intent(this, Main2Activity.class);
         startActivity(ingresar);
+        //Toast.makeText(this, "test debug", Toast.LENGTH_LONG).show();
     }
 }

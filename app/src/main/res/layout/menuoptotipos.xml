@@ -22,7 +22,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="snellen"
-                android:text="@string/testsnellen" />
+                android:text="@string/testsnellen"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -37,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="Lea"
-                android:text="@string/testLea" />
+                android:text="@string/testLea"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -52,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="egiratoria"
-                android:text="@string/testEgiratoria" />
+                android:text="@string/testEgiratoria"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -67,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="TestIshihara"
-                android:text="@string/testIshihara" />
+                android:text="@string/testIshihara"
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
