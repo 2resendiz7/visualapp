@@ -20,7 +20,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/Ejerciciocolores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -37,7 +37,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/Ejercicionumeros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -55,7 +55,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/Ejerciciolectura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

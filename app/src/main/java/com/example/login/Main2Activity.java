@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.mediarouter.app.MediaRouteButton;
 
-import com.google.android.gms.cast.MediaMetadata;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+
 import com.google.android.gms.cast.framework.CastButtonFactory;
 import com.google.android.gms.cast.framework.CastContext;
 import com.google.android.gms.cast.framework.CastSession;
@@ -17,36 +17,24 @@ import com.google.android.gms.cast.framework.SessionManager;
 import com.google.android.gms.cast.framework.SessionManagerListener;
 
 public class Main2Activity extends AppCompatActivity {
-
-    private CastContext mCastContext;
-
-
-    private  CastSession mCastSession;
-    private  SessionManager mSessionManager;
-    private SessionManagerListener mSessionManagerListener = new SessionManagerListenerImpl();
-
-
-    //@RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    private CastContext castContext;
+    private CastSession mCastSession;
+    private SessionManager mSessionManager;
+    private final SessionManagerListener mSessionManagerListener =
+            new SessionManagerListenerImpl();
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        mCastContext =  CastContext.getSharedInstance(this);
-        mSessionManager = mCastContext.getSessionManager();
-    }
 
-    @Override public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.cast, menu);
-        CastButtonFactory.setUpMediaRouteButton(getApplicationContext(),menu,R.id.media_route_menu_item);
-        return true;
+        CastContext castContext = CastContext.getSharedInstance(this);
+        mSessionManager = CastContext.getSharedInstance(this).getSessionManager();
     }
 
     @Override
     protected void onResume() {
-        super.onResume();
         mCastSession = mSessionManager.getCurrentCastSession();
         mSessionManager.addSessionManagerListener(mSessionManagerListener);
+        super.onResume();
     }
     @Override
     protected void onPause() {
@@ -55,37 +43,62 @@ public class Main2Activity extends AppCompatActivity {
         mCastSession = null;
     }
 
-    public class SessionManagerListenerImpl implements SessionManagerListener {
 
-        @Override
-        public void onSessionStarting(Session session) {}
 
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.cast, menu);
+        CastButtonFactory.setUpMediaRouteButton(getApplicationContext(),
+                menu,
+                R.id.media_route_menu_item);
+        return true;
+    }
+
+    private class SessionManagerListenerImpl implements SessionManagerListener {
         @Override
-        public void onSessionStarted(Session session, String s) {
-            mCastSession = mSessionManager.getCurrentCastSession();
-            //loadMedia(mCastSession);
+        public void onSessionStarting(Session session) {
+
         }
 
         @Override
-        public void onSessionStartFailed(Session session, int i) {}
+        public void onSessionStarted(Session session, String sessionId) {
+            invalidateOptionsMenu();
+        }
 
         @Override
-        public void onSessionEnding(Session session) {}
+        public void onSessionStartFailed(Session session, int i) {
+
+        }
 
         @Override
-        public void onSessionEnded(Session session, int i) {}
+        public void onSessionEnding(Session session) {
+
+        }
 
         @Override
-        public void onSessionResuming(Session session, String s) {}
+        public void onSessionResumed(Session session, boolean wasSuspended) {
+            invalidateOptionsMenu();
+        }
 
         @Override
-        public void onSessionResumed(Session session, boolean b) {}
+        public void onSessionResumeFailed(Session session, int i) {
+
+        }
 
         @Override
-        public void onSessionResumeFailed(Session session, int i) {}
+        public void onSessionSuspended(Session session, int i) {
+
+        }
 
         @Override
-        public void onSessionSuspended(Session session, int i) {}
+        public void onSessionEnded(Session session, int error) {
+            finish();
+        }
+
+        @Override
+        public void onSessionResuming(Session session, String s) {
+
+        }
     }
 
     public void menuoptotipos(View view){

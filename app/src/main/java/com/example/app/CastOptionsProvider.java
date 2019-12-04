@@ -1,4 +1,4 @@
-package com.example.login;
+package com.example.app;
 
 import android.content.Context;
 
@@ -7,16 +7,14 @@ import com.google.android.gms.cast.framework.CastOptions;
 import com.google.android.gms.cast.framework.OptionsProvider;
 import com.google.android.gms.cast.framework.SessionProvider;
 
-import java.util.ArrayList;
 import java.util.List;
-public class CastOptionsProvider implements OptionsProvider {
-    public static final String CUSTOM_NAMESPACE = "urn:x-cast:custom_namespace";
-    @Override
-    public CastOptions getCastOptions(Context context) {
 
-        List<String> supportedNamespaces = new ArrayList<>();
-        supportedNamespaces.add(CUSTOM_NAMESPACE);
-        CastOptions castOptions = new CastOptions.Builder().setReceiverApplicationId(context.getString(R.string.receiver_id)).build();
+public class CastOptionsProvider implements OptionsProvider {
+    @Override
+    public CastOptions getCastOptions(Context castContext) {
+        CastOptions castOptions = new CastOptions.Builder()
+                .setReceiverApplicationId(castContext.getString(R.string.app_id))
+                .build();
         return castOptions;
     }
 
@@ -24,7 +22,5 @@ public class CastOptionsProvider implements OptionsProvider {
     public List<SessionProvider> getAdditionalSessionProviders(Context context) {
         return null;
     }
-
-
 }
 
